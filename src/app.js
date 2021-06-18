@@ -69,6 +69,7 @@ const Action = (props) => {
   return (
     <div>
       <button
+      className = 'btn btn-large btn-outline-dark'
       onClick={props.chooseOption}
       disabled={!props.optionsAbility}
       > What should I do </button>
@@ -78,9 +79,9 @@ const Action = (props) => {
 
 const Option = (props) => {
   return (
-    <div>
+    <li className="option">
       {props.optionText}
-    </div>
+    </li>
   )
 }
 
@@ -88,12 +89,14 @@ const Option = (props) => {
 const Options = (props) => {
   return (
     <div>
-      <button onClick={props.clearOptions}>Clear Options</button>
+      <button className="btn btn-large btn-dark" onClick={props.clearOptions}>Clear Options</button>
+      <ul>
       {
         props.options.map((option) => {
           return <Option key={option} optionText={option} />
         })
       }
+      </ul>
     </div>
   )
 }
@@ -127,7 +130,7 @@ class AddOption extends React.Component {
         {this.state.error && <p>{this.state.error}</p>}
         <form onSubmit = {this.handleNewOption}>
           <input type="text" name="option"/>
-          <button>Add option</button>
+          <button className="btn btn-large btn-dark">Add option</button>
         </form>
       </div>
     )

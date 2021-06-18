@@ -1,3 +1,59 @@
+
+body {
+  background-image: url("img/indecision.png");
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 .hide {
   display: none;
 }
+
+.background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+div#app div:first-child {
+  padding: 10% 15%;
+  font-weight: 900;
+}
+
+div#app div:first-child h2 {
+  font-size: 3rem;
+
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+button {
+  margin: 0 2% 2%;
+  padding: 0.5rem;
+  border-radius: 15%;
+}
+
+input {
+  padding: 0.5rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+
+/* Footer */
+
+footer {
+  padding: 4% 15%;
+  background-color: #fff;
+}
+
